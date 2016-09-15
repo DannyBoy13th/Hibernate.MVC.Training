@@ -77,4 +77,15 @@ public class Order {
     public void setOrderDate(Date orderDate) {
         this.orderDate = orderDate;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", waiter=" + waiter +
+                ", dishes=" + dishes +
+                ", tableNumber=" + tableNumber +
+                ", orderDate=" + orderDate +
+                '}';
+    }
 }

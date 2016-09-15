@@ -12,4 +12,7 @@ public interface DishDao {
     void save(Dish dish);
 
     List<Dish> findAllDishes();
+
+    Dish findByName(String name);
+
 }

@@ -27,8 +27,18 @@ public class EmployeeController {
         chef.setPhoneNumber("+380631078997");
         chef.setSalary(50000.0F);
 
+        Employee waiter = new Employee();
+        waiter.setName("Kate");
+        waiter.setSurname("Green");
+        waiter.setPosition(Position.WAITER);
+        waiter.setPhoneNumber("+380634896158");
+        waiter.setSalary(25000.0F);
+
         if (!allEmployees.contains(chef)) {
             employeeDao.save(chef);
+        }
+        if (!allEmployees.contains(waiter)) {
+            employeeDao.save(waiter);
         }
     }
 
