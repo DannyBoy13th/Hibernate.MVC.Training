@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+default-autowire="byName">
+
+    <bean id="main" class="ua.goit.java.spring.mvc.Main"/>
+
+    <bean id="employeeController" class="ua.goit.java.spring.mvc.Controllers.EmployeeController"/>
+    <bean id="dishController" class="ua.goit.java.spring.mvc.Controllers.DishController"/>
+
+    <bean id="employeeDao" class="ua.goit.java.spring.mvc.dao.hibernate.HEmployeeDao"/>
+    <bean id="dishDao" class="ua.goit.java.spring.mvc.dao.hibernate.HDishDao"/>
+
+</beans>

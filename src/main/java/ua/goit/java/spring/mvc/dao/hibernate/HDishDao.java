@@ -1,0 +1,29 @@
+package ua.goit.java.spring.mvc.dao.hibernate;
+
+import org.hibernate.SessionFactory;
+import ua.goit.java.spring.mvc.dao.DishDao;
+import ua.goit.java.spring.mvc.model.Dish;
+
+import java.util.List;
+
+/**
+ * Created by Daniel Solo on 15.09.2016.
+ */
+public class HDishDao implements DishDao {
+
+    private SessionFactory sessionFactory;
+
+    @Override
+    public void save(Dish dish) {
+        sessionFactory.getCurrentSession().save(dish);
+    }
+
+    @Override
+    public List<Dish> findAllDishes() {
+        return sessionFactory.getCurrentSession().createQuery("select d from Dish d").list();
+    }
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+}
